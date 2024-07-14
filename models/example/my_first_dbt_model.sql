@@ -6,7 +6,7 @@
 
     Try changing "table" to "view" below
 */
-
+/*
 {{ config(materialized='table') }}
 
 with source_data as (
@@ -15,7 +15,7 @@ with source_data as (
     union all
     select null as id
 
-)
+)*/
 
 select *
 from source_data
@@ -25,3 +25,12 @@ from source_data
 */
 
 -- where id is not null
+with raw.jaffle_shop.customers  as 
+
+( id integer,
+
+  first_name varchar,
+
+  last_name varchar
+
+);
